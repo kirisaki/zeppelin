@@ -1,0 +1,32 @@
+name:                zeppelin
+version:             0.0.1
+github:              "kirisaki/zeppelin"
+license:             BSD3
+author:              "Akihito KIRISAKI"
+maintainer:          "kirisaki@klaraworks.net"
+copyright:           "Copyright: (c) 2018 Akihito KIRISAKI"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            GraphQL encoder/decoder
+category:            Web
+description:         Please see the README on GitHub at <https://github.com/kirisaki/zeppelin#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  zeppelin-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - zeppelin
